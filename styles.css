@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f5f8;    
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    
+
+}
+
+.container {
+    padding: 10px 10%;
+    overflow: hidden;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 111;
+
+}
+
+.logo {
+    font-size: 2.5em;
+    color: #3d535f;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+}
+
+.logo b {
+    color: #7f00ff;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+nav ul li a {
+    color: #3d535f;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    font-weight: 600;
+    
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    border-radius: 10px;
+    background: #7f00ff;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+
+nav ul li:hover a::after {
+    width: 100%
+}
+
+.header-text {
+    margin-top: 13.6%;
+    font-size: 30px;
+    overflow: hidden;
+    
+
+
+}
+
+.header-text p {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+
+
+.header-text h1 {
+    font-size: 3em;
+    margin-top: 60px;
+    color: #3d535f;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.header-text h1 span {
+    color: #7f00ff;
+    
+}
+
+.header-text::before {
+    position: absolute;
+    content: '';
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    left: -14%;
+    top: 35%;
+    background: linear-gradient(45deg,#7f00ff,#ffc0cb);
+    opacity: 0;
+    animation: slideright 1s ease forwards,object1 3s linear infinite;
+    animation-delay: 0.3s;
+}
+
+.header-text::after {
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 45%;
+    top: 12%;
+    background: linear-gradient(45deg,#7f00ff,pink);
+    opacity: 0;
+    animation: slidedown 1s ease forwards,object2 3s linear infinite;
+    animation-delay: 0.2s;
+}
+
+
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 36%
+    }
+}
+
+@keyframes object2 {
+    50% {
+        left: 45%;
+        top: 14%
+    }
+}
+
+
+/*.container::after {
+    position: absolute;
+    content: '';
+    height: 650px;
+    width: 650px;;
+    border-radius: 50%;
+    right: -140px;
+    bottom: -50px;
+    background: linear-gradient(45deg,#7f00ff,pink);
+    opacity: 0;
+    animation: slideleft 1s ease forwards,object3 5s linear infinite;
+    animation-delay: 0.3s;
+}
+
+@keyframes object3 {
+    50% {
+        right:-130px;
+        bottom: -30px;
+    }
+}
+*/
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+}
+
+.li1 {
+    opacity: 0;
+    animation: slidedown 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.li2 {
+    opacity: 0;
+    animation: slidedown 1s ease forwards;
+    animation-delay: .2s;
+}
+
+.li3 {
+    opacity: 0;
+    animation: slidedown 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.li4 {
+    opacity: 0;
+    animation: slidedown 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.right {
+    height: 450px;
+    position: absolute;
+    top: 280px;
+    right: -15px;
+    opacity: 0;
+    animation: slideup 1s ease forwards,object3 3s linear infinite;
+    animation-delay: 0.7s;
+
+}
+
+@keyframes object3 {
+    50% {
+        right: -7px;
+        top: 275px;
+
+    }
+}
+
+.aboutme {
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    position: absolute;
+    height: 500px;
+    left: 240px;
+    top: 175px;
+}
+
+.aboutmetext {
+    margin-right: 70px;
+    text-align: left;
+
+}
+
+.aboutmetext span {
+    color: #7f00ff;
+
+}
+
+.aboutmetext h3 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
